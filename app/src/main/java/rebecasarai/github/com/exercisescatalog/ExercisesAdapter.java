@@ -20,16 +20,20 @@ import java.util.List;
  * Created by Rebeca on 07/10/17.
  */
 public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyViewHolder> {
-
+    private LayoutInflater inflater;
     private Context mContext;
     private List<Exercises> exercisesList;
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder  {
         public TextView title, count;
         public ImageView thumbnail, overflow;
+        private final Context context;
+
 
         public MyViewHolder(View view) {
             super(view);
+            context = itemView.getContext();
+            inflater= LayoutInflater.from(context);
             title = (TextView) view.findViewById(R.id.title);
             count = (TextView) view.findViewById(R.id.count);
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
@@ -46,7 +50,7 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.album_card, parent, false);
+                .inflate(R.layout.exercise_card, parent, false);
 
         return new MyViewHolder(itemView);
     }
@@ -69,19 +73,19 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
     }
 
     /**
-     * Showing popup menu when tapping on 3 dots
+     * Muestra el menu popup cuando se da click en los 3 puntos
      */
     private void showPopupMenu(View view) {
         // inflate menu
         PopupMenu popup = new PopupMenu(mContext, view);
         MenuInflater inflater = popup.getMenuInflater();
-        inflater.inflate(R.menu.menu_album, popup.getMenu());
+        inflater.inflate(R.menu.menu_exercise, popup.getMenu());
         popup.setOnMenuItemClickListener(new MyMenuItemClickListener());
         popup.show();
     }
 
     /**
-     * Click listener for popup menu items
+     * Click listener para el pop up de los items
      */
     class MyMenuItemClickListener implements PopupMenu.OnMenuItemClickListener {
 
@@ -93,9 +97,6 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
             switch (menuItem.getItemId()) {
                 case R.id.action_add_favourite:
                     Toast.makeText(mContext, "Add to favourite", Toast.LENGTH_SHORT).show();
-                    return true;
-                case R.id.action_exercise_next:
-                    Toast.makeText(mContext, "Play next", Toast.LENGTH_SHORT).show();
                     return true;
                 default:
             }

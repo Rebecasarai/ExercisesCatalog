@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Converting dp to pixel
+     * Convierte dp a pixel
      */
     private int dpToPx(int dp) {
         Resources r = getResources();
