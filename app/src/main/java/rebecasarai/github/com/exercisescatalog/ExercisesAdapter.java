@@ -1,6 +1,7 @@
 package rebecasarai.github.com.exercisescatalog;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -23,6 +24,7 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
     private LayoutInflater inflater;
     private Context mContext;
     private List<Exercises> exercisesList;
+    Intent intent;
 
     public class MyViewHolder extends RecyclerView.ViewHolder  {
         public TextView title, count;
@@ -94,9 +96,11 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
 
         @Override
         public boolean onMenuItemClick(MenuItem menuItem) {
+            int v = menuItem.getItemId();
             switch (menuItem.getItemId()) {
                 case R.id.action_add_favourite:
                     Toast.makeText(mContext, "Add to favourite", Toast.LENGTH_SHORT).show();
+                    //v.getContext().startActivity(new Intent(v.getContext(),FontF.class));
                     return true;
                 default:
             }

@@ -40,13 +40,10 @@
         android:layout_gravity="center_vertical"
         android:layout_margin="20dp"
         >
-        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fillViewport="true">
+
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/group"
                 android:onClick="calcular">
 
@@ -78,7 +75,7 @@
                     android:layout_toRightOf="@id/resta"
                     android:layout_below="@id/multi"/>
             </RadioGroup>
-        </ScrollView>
+
     </RelativeLayout>
 
     <TextView
