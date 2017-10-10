@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="rebecasarai.github.com.exercisescatalog.Gallery">
+    tools:context="rebecasarai.github.com.exercisescatalog.Gallery"
+    android:stretchColumns="1">
     <TableRow android:id="@+id/table" android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -25,5 +26,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </TableRow>
+    <TableRow>
+        <TextView
+            android:text="prev"
+            android:padding="3dip" />
+        <TextView
+            android:text="next"
+            android:gravity="right"
+            android:padding="3dip" />
+    </TableRow>
+
 
 </TableLayout>
