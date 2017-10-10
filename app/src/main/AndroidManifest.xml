@@ -24,7 +24,6 @@
         <activity
             android:name=".Calculator"
             android:label="Calculadora"></activity>
-        <activity android:name=".Gallery" />
         <activity android:name=".MemoryGame" />
         <activity android:name=".RadioButtonCalculator" />
         <activity android:name=".ReconocimientoImagen" />
