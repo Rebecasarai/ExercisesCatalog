@@ -39,7 +39,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        android:visibility="gone"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,13 +48,13 @@
         android:text="prev"
         android:layout_gravity="bottom"
         android:background="#FFFFFF"
-
         />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/next"
         android:text="next"
-        android:layout_gravity="bottom|right"/>
+        android:layout_gravity="bottom|right"
+        android:background="#FFFFFF"/>
 
 </android.support.design.widget.CoordinatorLayout>

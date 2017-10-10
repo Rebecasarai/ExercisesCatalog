@@ -91,10 +91,10 @@ public class MainActivity extends AppCompatActivity {
      */
     private void prepareAlbums() {
         int[] covers = new int[]{
-                R.drawable.scrn1,
+                R.drawable.fontf,
                 R.drawable.calcu,
                 R.drawable.scrn1,
-                R.drawable.scrn1,
+                R.drawable.galeria,
                 R.drawable.scrn1,};
 
         Exercises a = new Exercises("FontFun", "Try crazy fonts", covers[0]);
@@ -104,6 +104,9 @@ public class MainActivity extends AppCompatActivity {
         exercisesList.add(a);
 
         a = new Exercises("Calculator", "Calculate with colors", covers[1]);
+        exercisesList.add(a);
+
+        a = new Exercises("Galeria", "Galeria Simple", covers[1]);
         exercisesList.add(a);
 
         a = new Exercises("Memory Game", "Have fun finding the matches", covers[2]);
