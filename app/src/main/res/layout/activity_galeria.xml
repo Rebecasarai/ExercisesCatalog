@@ -40,5 +40,20 @@
         android:layout_gravity="end|bottom"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/prev"
+        android:text="prev"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/next"
+        android:text="next"
+        android:layout_gravity="bottom|right"/>
 
 </android.support.design.widget.CoordinatorLayout>

@@ -46,7 +46,7 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(mContext, "Image", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(view.getContext(), FontF.class);
+                    Intent intent = new Intent(view.getContext(), Galeria.class);
                     view.getContext().startActivity(intent);
                     //Toast.makeText(view.getContext(), "os version is: " + feed.getTitle(), Toast.LENGTH_SHORT).show();
 

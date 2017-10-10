@@ -16,9 +16,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Galeria extends AppCompatActivity {
+
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -117,9 +119,20 @@ public class Galeria extends AppCompatActivity {
             View rootView = inflater.inflate( R.layout.fragment_galeria, container, false );
             TextView textView = (TextView) rootView.findViewById( R.id.section_label );
             textView.setText( getString( R.string.section_format, getArguments().getInt( ARG_SECTION_NUMBER ) ) );
+
+            int[] images = new int[]{
+                    R.drawable.scrn1,
+                    R.drawable.scrn1,
+                    R.drawable.calcu,
+                    R.drawable.cover};
+
+            ImageView imageview = (ImageView) rootView.findViewById( R.id.gallery_image );
+            imageview.setImageResource( images[getArguments().getInt( ARG_SECTION_NUMBER )] );
+
             return rootView;
         }
     }
+
 
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
@@ -148,11 +161,11 @@ public class Galeria extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "Imagen 1";
                 case 1:
-                    return "SECTION 2";
+                    return "Imagen 2";
                 case 2:
-                    return "SECTION 3";
+                    return "Imagen 3";
             }
             return null;
         }
