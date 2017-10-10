@@ -99,8 +99,9 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
             int v = menuItem.getItemId();
             switch (menuItem.getItemId()) {
                 case R.id.action_add_favourite:
-                    Toast.makeText(mContext, "Add to favourite", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "Direccionando a github", Toast.LENGTH_SHORT).show();
                     //v.getContext().startActivity(new Intent(v.getContext(),FontF.class));
+
                     return true;
                 default:
             }
