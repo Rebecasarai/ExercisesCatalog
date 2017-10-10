@@ -6,4 +6,6 @@
     <string name="backdrop_title">Fun apps</string>
     <string name="backdrop_subtitle">Top mini apps to have fun</string>
     <string name="gallerytitle">Gallery</string>
+    <string name="title_activity_galeria">Galeria</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>

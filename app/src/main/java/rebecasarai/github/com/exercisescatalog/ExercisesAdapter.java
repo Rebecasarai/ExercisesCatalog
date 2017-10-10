@@ -24,7 +24,6 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
     private LayoutInflater inflater;
     private Context mContext;
     private List<Exercises> exercisesList;
-    Intent intent;
 
     public class MyViewHolder extends RecyclerView.ViewHolder  {
         public TextView title, count;
@@ -40,6 +39,29 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
             count = (TextView) view.findViewById(R.id.count);
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
             overflow = (ImageView) view.findViewById(R.id.overflow);
+
+
+            //Cuando toca la imagen de la viewcard
+            thumbnail.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(mContext, "Image", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(view.getContext(), FontF.class);
+                    view.getContext().startActivity(intent);
+                    //Toast.makeText(view.getContext(), "os version is: " + feed.getTitle(), Toast.LENGTH_SHORT).show();
+
+                }
+
+            });
+
+            //Cuando toca la parte inferior de la viewcard
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Toast.makeText(mContext, "ViewCard", Toast.LENGTH_SHORT).show();
+                }
+            });
         }
     }
 
@@ -65,6 +87,7 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
 
         // loading exercises cover using Glide library
         Glide.with(mContext).load(exercises.getThumbnail()).into(holder.thumbnail);
+
 
         holder.overflow.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -70,21 +70,9 @@ public class FontF extends AppCompatActivity implements View.OnClickListener {
                     textoAcambiar.setTextColor(Color.BLACK);
                 }
                 break;
-            case R.id.checkBox5:
-                if (checked) {
-                    //Red
-                    textoAcambiar.setTypeface(null, Typeface.BOLD_ITALIC);
-                }else {
-                    textoAcambiar.setTypeface(null, Typeface.NORMAL);
-                }
-                break;
+
         }
 
 
     }
-
-    public void deschekear(View v){
-
-    }
-
 }

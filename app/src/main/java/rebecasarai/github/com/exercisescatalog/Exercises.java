@@ -12,11 +12,10 @@ public class Exercises {
     public Exercises() {
     }
 
-    public Exercises(String name, String descrip, int thumbnail, Intent execIntent) {
+    public Exercises(String name, String descrip, int thumbnail) {
         this.name = name;
         this.descrip = descrip;
         this.thumbnail = thumbnail;
-        this.execIntent = execIntent;
     }
 
     public String getName() {
