@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         a = new Exercises("Calculator", "Calculate with colors", covers[1]);
         exercisesList.add(a);
 
-        a = new Exercises("Galeria", "Galeria Simple", covers[1]);
+        a = new Exercises("Galeria", "Galeria Simple", covers[3]);
         exercisesList.add(a);
 
         a = new Exercises("Memory Game", "Have fun finding the matches", covers[2]);
