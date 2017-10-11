@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
 
-        prepareAlbums();
+        prepareExercises();
 
         try {
             Glide.with(this).load(R.drawable.scrn1).into((ImageView) findViewById(R.id.backdrop));
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Añadir ejercicios
      */
-    private void prepareAlbums() {
+    private void prepareExercises() {
         int[] covers = new int[]{
                 R.drawable.fontf,
                 R.drawable.calcu,
@@ -110,6 +110,9 @@ public class MainActivity extends AppCompatActivity {
         exercisesList.add(a);
 
         a = new Exercises("Memory Game", "Have fun finding the matches", covers[2]);
+        exercisesList.add(a);
+
+        a= new Exercises("Image Recognizer", "Recognize images with AI", covers[2]);
         exercisesList.add(a);
 
         adapter.notifyDataSetChanged();

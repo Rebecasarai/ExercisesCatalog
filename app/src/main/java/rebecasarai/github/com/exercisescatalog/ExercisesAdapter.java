@@ -40,30 +40,7 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
             overflow = (ImageView) view.findViewById(R.id.overflow);
             view.setOnClickListener(this);
-
-            //Cuando toca la imagen de la viewcard
-           /* thumbnail.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    //Toast.makeText(mContext, "Image", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(view.getContext(), Galeria.class);
-                    //view.getContext().startActivity(intent);
-                    //Toast.makeText(view.getContext(), "os version is: " + feed.getTitle(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(mContext, "", Toast.LENGTH_SHORT).show();
-                    switch (view.getId()){
-                    }
-                }
-
-            });*/
-
-            //Cuando toca la parte inferior de la viewcard
-            /*view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                    Toast.makeText(mContext, "ViewCard de Id: "+view.getId() , Toast.LENGTH_SHORT).show();
-                }
-            });*/
+            thumbnail.setOnClickListener(this);
         }
 
         @Override
@@ -71,10 +48,25 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
             Toast.makeText(view.getContext(),
                     String.format("Clicked on position %d", getAdapterPosition()),
                     Toast.LENGTH_SHORT).show();
-
+            switch (getAdapterPosition()){
+                case 0:
+                    view.getContext().startActivity(new Intent(view.getContext(), FontF.class));
+                    break;
+                case 1:
+                    view.getContext().startActivity(new Intent(view.getContext(),RadioButtonCalculator.class));
+                    break;
+                case 2:
+                    view.getContext().startActivity(new Intent(view.getContext(), Calculator.class));
+                    break;
+                case 3:
+                    view.getContext().startActivity(new Intent(view.getContext(), Galeria.class));
+                    break;
+                case 4:
+                    view.getContext().startActivity(new Intent(view.getContext(), ReconocimientoImagen.class));
+                    break;
+            }
         }
     }
-
 
     public ExercisesAdapter(Context mContext, List<Exercises> exercisesList) {
         this.mContext = mContext;
