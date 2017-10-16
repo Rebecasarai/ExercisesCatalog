@@ -1,6 +1,5 @@
 package rebecasarai.github.com.exercisescatalog;
 
-
 import android.content.Intent;
 import android.net.Uri;
 
@@ -10,7 +9,11 @@ public class Exercises {
     private int thumbnail;
     private Uri uri;
 
-    public Exercises() {
+    public Exercises(String name, String descrip, int thumbnail, Uri uri) {
+        this.name = name;
+        this.descrip = descrip;
+        this.thumbnail = thumbnail;
+        this.uri = uri;
     }
 
     public Exercises(String name, String descrip, int thumbnail) {
@@ -19,7 +22,6 @@ public class Exercises {
         this.thumbnail = thumbnail;
     }
 
-    
     public String getName() {
         return name;
     }

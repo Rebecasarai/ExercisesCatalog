@@ -2,6 +2,7 @@ package rebecasarai.github.com.exercisescatalog;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.net.Uri;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,6 +32,11 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
         public TextView title, count;
         public ImageView thumbnail, overflow;
         private final Context context;
+
+        private int exerciseid;
+        ArrayList<Exercises> places = new ArrayList<Exercises>();
+        Context ctx;
+        Exercises place;
 
 
         public MyViewHolder(View view) {
@@ -113,7 +120,7 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
     }
 
     /**
-     * Click listener para el pop up de los items
+     * Click listener para el menu
      */
     class MyMenuItemClickListener implements PopupMenu.OnMenuItemClickListener {
 
@@ -140,9 +147,13 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
         @Override
         public boolean onMenuItemClick(MenuItem menuItem) {
             int v = menuItem.getItemId();
+            /*int recyclerId = getLayoutPosition();
+            place = this.places.get(recyclerId);
+            String pid=place.getId();*/
+
             switch (menuItem.getItemId()) {
                 case R.id.action_add_favourite:
-                    Toast.makeText(mContext, "Direccionando a github", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "", Toast.LENGTH_SHORT).show();
                     /*Uri uri = Uri.parse("https://rebecasarai.github.io/");
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     mContext.startActivity(intent);*/
