@@ -2,6 +2,7 @@ package rebecasarai.github.com.exercisescatalog;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -125,6 +126,9 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
             switch (menuItem.getItemId()) {
                 case R.id.action_add_favourite:
                     Toast.makeText(mContext, "Direccionando a github", Toast.LENGTH_SHORT).show();
+                    Uri uri = Uri.parse("https://www.example.com");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    mContext.startActivity(intent);
                     //v.getContext().startActivity(new Intent(v.getContext(),FontF.class));
 
                     return true;
