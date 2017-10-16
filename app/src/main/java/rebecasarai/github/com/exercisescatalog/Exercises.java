@@ -19,6 +19,7 @@ public class Exercises {
         this.thumbnail = thumbnail;
     }
 
+    
     public String getName() {
         return name;
     }
