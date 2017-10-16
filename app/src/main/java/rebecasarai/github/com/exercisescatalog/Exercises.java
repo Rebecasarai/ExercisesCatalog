@@ -2,12 +2,13 @@ package rebecasarai.github.com.exercisescatalog;
 
 
 import android.content.Intent;
+import android.net.Uri;
 
 public class Exercises {
     private String name;
     private String descrip;
     private int thumbnail;
-    private Intent execIntent;
+    private Uri uri;
 
     public Exercises() {
     }
@@ -42,11 +43,11 @@ public class Exercises {
         this.thumbnail = thumbnail;
     }
 
-    public Intent getExecIntent() {
-        return execIntent;
+    public Uri getUri() {
+        return uri;
     }
 
-    public void setExecIntent(Intent execIntent) {
-        this.execIntent = execIntent;
+    public void setUri(Uri uri) {
+        this.uri = uri;
     }
 }
