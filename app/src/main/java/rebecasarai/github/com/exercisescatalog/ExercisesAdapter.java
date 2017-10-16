@@ -120,15 +120,32 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
         public MyMenuItemClickListener() {
         }
 
+       /* @Override
+        public boolean onMenuItemClick(MenuItem menuItem) {
+            int v = menuItem.getItemId();
+            switch (menuItem.getItemId()) {
+                case R.id.action_add_favourite:
+                    Toast.makeText(mContext, "Direccionando a github", Toast.LENGTH_SHORT).show();
+                    Uri uri = Uri.parse("https://rebecasarai.github.io/");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    mContext.startActivity(intent);
+                    //v.getContext().startActivity(new Intent(v.getContext(),FontF.class));
+
+                    return true;
+                default:
+            }
+            return false;
+        }*/
+
         @Override
         public boolean onMenuItemClick(MenuItem menuItem) {
             int v = menuItem.getItemId();
             switch (menuItem.getItemId()) {
                 case R.id.action_add_favourite:
                     Toast.makeText(mContext, "Direccionando a github", Toast.LENGTH_SHORT).show();
-                    Uri uri = Uri.parse("https://www.example.com");
+                    /*Uri uri = Uri.parse("https://rebecasarai.github.io/");
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    mContext.startActivity(intent);
+                    mContext.startActivity(intent);*/
                     //v.getContext().startActivity(new Intent(v.getContext(),FontF.class));
 
                     return true;
