@@ -8,7 +8,7 @@
     tools:context="rebecasarai.github.com.exercisescatalog.Calculator">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/screen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1432"
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/numeros"
-        android:layout_below="@id/textView"
+        android:layout_below="@id/screen"
         >
 
     <Button
@@ -131,7 +131,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/operadores"
         android:layout_toRightOf="@id/numeros"
-        android:layout_below="@id/textView"
+        android:layout_below="@id/screen"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="10dp">
