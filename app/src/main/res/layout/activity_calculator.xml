@@ -129,6 +129,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/operadores"
         android:layout_toRightOf="@id/numeros"
         android:layout_below="@id/textView"
         android:layout_marginLeft="10dp"
@@ -136,7 +137,7 @@
         android:layout_marginBottom="10dp">
 
         <Button
-        android:id="@+id/sumar"
+        android:id="@+id/sumarCalcu"
         android:layout_width="85dp"
         android:layout_height="81dp"
         android:background="@android:color/holo_green_light"
@@ -146,14 +147,14 @@
 
 
         <Button
-            android:id="@+id/restar"
+            android:id="@+id/restarCalcu"
             android:layout_width="85dp"
             android:layout_height="81dp"
             android:background="@android:color/holo_green_dark"
             android:text="-"
             android:textColor="@color/cardview_light_background"
             android:textSize="60sp"
-            android:layout_below="@id/sumar"
+            android:layout_below="@id/sumarCalcu"
             android:layout_marginTop="10dp"/>
 
     <Button
@@ -162,12 +163,24 @@
         android:layout_height="81dp"
         android:text="X"
         android:textSize="24sp"
-        android:layout_below="@id/restar"
+        android:layout_below="@id/restarCalcu"
         android:background="@color/colorAccent"
         android:layout_marginTop="10dp"/>
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/numeros">
+
+        <Button
+            android:layout_width="85dp"
+            android:layout_height="81dp"
+            android:text="/"
+            />
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

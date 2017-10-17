@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FontF">
+    tools:context=".FontF"
+    android:layout_margin="25dp">
 
     <EditText
         android:layout_width="wrap_content"
