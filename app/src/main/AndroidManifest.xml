@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="rebecasarai.github.com.exercisescatalog">
-    <uses-permission android:name="android.permission.INTERNET" />
+          package="rebecasarai.github.com.exercisescatalog">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -10,30 +12,33 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"><intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
         <activity
             android:name=".FontF"
             android:label="Font Fun"
             android:parentActivityName=".MainActivity">
-
         </activity>
         <activity
             android:name=".Calculator"
             android:label="Calculadora"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".MemoryGame"
             android:parentActivityName=".MainActivity"/>
-        <activity android:name=".RadioButtonCalculator"
+        <activity
+            android:name=".MemoryGame"
             android:parentActivityName=".MainActivity"/>
-        <activity android:name=".ReconocimientoImagen"
+        <activity
+            android:name=".RadioButtonCalculator"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".ReconocimientoImagen"
             android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".Galeria"
@@ -42,7 +47,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="rebecasarai.github.com.exercisescatalog.MainActivity" />
+                android:value="rebecasarai.github.com.exercisescatalog.MainActivity"/>
         </activity>
     </application>
 

@@ -2,8 +2,6 @@ package rebecasarai.github.com.exercisescatalog;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
-import android.net.Uri;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -17,7 +15,6 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,19 +24,16 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
     private LayoutInflater inflater;
     private Context mContext;
     private List<Exercises> exercisesList;
+    private View.OnClickListener mOnClickListener;
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView title, count;
         public ImageView thumbnail, overflow;
         private final Context context;
 
-        private int exerciseid;
-        ArrayList<Exercises> places = new ArrayList<Exercises>();
-        Context ctx;
-        Exercises place;
-
 
         public MyViewHolder(View view) {
+
             super(view);
             context = itemView.getContext();
             inflater= LayoutInflater.from(context);
@@ -53,9 +47,12 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
 
         @Override
         public void onClick(View view) {
+            int position = getAdapterPosition();
+
             Toast.makeText(view.getContext(),
                     String.format("Clicked on position %d", getAdapterPosition()),
                     Toast.LENGTH_SHORT).show();
+
             switch (getAdapterPosition()){
                 case 0:
                     view.getContext().startActivity(new Intent(view.getContext(), FontF.class));
@@ -98,7 +95,6 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
         // loading exercises cover using Glide library
         Glide.with(mContext).load(exercises.getThumbnail()).into(holder.thumbnail);
 
-
         holder.overflow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,7 +104,7 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
     }
 
     /**
-     * Muestra el menu popup cuando se da click en los 3 puntos
+     * Muestra el menu popup
      */
     private void showPopupMenu(View view) {
         // inflate menu
@@ -119,44 +115,25 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
         popup.show();
     }
 
+    public interface OnPositionClickListener {
+        void onPositionClicked(int position);
+    }
+
     /**
      * Click listener para el menu
      */
     class MyMenuItemClickListener implements PopupMenu.OnMenuItemClickListener {
 
-        public MyMenuItemClickListener() {
-        }
-
-       /* @Override
-        public boolean onMenuItemClick(MenuItem menuItem) {
-            int v = menuItem.getItemId();
-            switch (menuItem.getItemId()) {
-                case R.id.action_add_favourite:
-                    Toast.makeText(mContext, "Direccionando a github", Toast.LENGTH_SHORT).show();
-                    Uri uri = Uri.parse("https://rebecasarai.github.io/");
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    mContext.startActivity(intent);
-                    //v.getContext().startActivity(new Intent(v.getContext(),FontF.class));
-
-                    return true;
-                default:
-            }
-            return false;
-        }*/
-
         @Override
         public boolean onMenuItemClick(MenuItem menuItem) {
-            int v = menuItem.getItemId();
-            /*int recyclerId = getLayoutPosition();
-            place = this.places.get(recyclerId);
-            String pid=place.getId();*/
-
             switch (menuItem.getItemId()) {
                 case R.id.action_add_favourite:
                     Toast.makeText(mContext, "", Toast.LENGTH_SHORT).show();
                     /*Uri uri = Uri.parse("https://rebecasarai.github.io/");
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     mContext.startActivity(intent);*/
+
+
                     //v.getContext().startActivity(new Intent(v.getContext(),FontF.class));
 
                     return true;

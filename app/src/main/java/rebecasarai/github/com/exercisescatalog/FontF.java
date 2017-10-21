@@ -15,7 +15,7 @@ public class FontF extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_font_f);
         textoAcambiar= (TextView) findViewById(R.id.textoAcambiar);
         bold = (CheckBox) findViewById(R.id.checkBox);
         gigantic = (CheckBox) findViewById(R.id.checkBox2);
@@ -70,7 +70,6 @@ public class FontF extends AppCompatActivity implements View.OnClickListener {
                     textoAcambiar.setTextColor(Color.BLACK);
                 }
                 break;
-
         }
 
 

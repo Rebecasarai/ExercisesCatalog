@@ -119,10 +119,10 @@ public class Galeria extends AppCompatActivity {
             //textView.setText( getString( R.string.section_format, getArguments().getInt( ARG_SECTION_NUMBER ) ) );
 
             int[] images = new int[]{
-                    R.drawable.scrn1,
-                    R.drawable.scrn1,
-                    R.drawable.calcu,
-                    R.drawable.cover};
+                    R.drawable.koala,
+                    R.drawable.fox,
+                    R.drawable.chick,
+                    R.drawable.tiger};
 
             ImageView imageview = (ImageView) rootView.findViewById( R.id.gallery_image );
             imageview.setImageResource( images[getArguments().getInt( ARG_SECTION_NUMBER )] );
