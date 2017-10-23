@@ -2,6 +2,7 @@ package rebecasarai.github.com.exercisescatalog;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -30,7 +31,6 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
         public TextView title, count;
         public ImageView thumbnail, overflow;
         private final Context context;
-
 
         public MyViewHolder(View view) {
 
@@ -129,11 +129,9 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.MyVi
             switch (menuItem.getItemId()) {
                 case R.id.action_add_favourite:
                     Toast.makeText(mContext, "", Toast.LENGTH_SHORT).show();
-                    /*Uri uri = Uri.parse("https://rebecasarai.github.io/");
+                    Uri uri = Uri.parse("https://rebecasarai.github.io/");
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    mContext.startActivity(intent);*/
-
-
+                    mContext.startActivity(intent);
                     //v.getContext().startActivity(new Intent(v.getContext(),FontF.class));
 
                     return true;
